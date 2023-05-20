@@ -1,6 +1,6 @@
 import { type Request, type Response } from "express";
-import { notFoundError } from "./notFoundError";
-import CustomError from "../../../CustomError/CustomError";
+import { notFoundError } from "./notFoundError.js";
+import CustomError from "../../../CustomError/CustomError.js";
 
 type CustomResponse = Pick<Response, "status" | "json">;
 
