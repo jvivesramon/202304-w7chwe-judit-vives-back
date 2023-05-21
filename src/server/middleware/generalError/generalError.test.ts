@@ -29,7 +29,7 @@ describe("Given a generalError middleware", () => {
       expect(res.status).toHaveBeenCalledWith(statusCode);
     });
 
-    test("Then it should call the response's method json with code 500", () => {
+    test("Then it should call the response's method json with code error message", () => {
       const { message } = error;
 
       generalError(error as CustomError, req as Request, res as Response, next);
