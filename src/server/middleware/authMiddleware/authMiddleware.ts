@@ -3,7 +3,11 @@ import jwt from "jsonwebtoken";
 import { type CustomRequest } from "../../types";
 import CustomError from "../../../CustomError/CustomError";
 
-export const auth = (req: CustomRequest, res: Response, next: NextFunction) => {
+const authMiddleware = (
+  req: CustomRequest,
+  res: Response,
+  next: NextFunction
+) => {
   try {
     const authorizationHeader = req.header("Authorization");
 
@@ -29,3 +33,5 @@ export const auth = (req: CustomRequest, res: Response, next: NextFunction) => {
     next(customError);
   }
 };
+
+export default authMiddleware;
