@@ -2,7 +2,7 @@ import "./loadEnviroment.js";
 import createDebug from "debug";
 import chalk from "chalk";
 import app from "./server/index.js";
-import connectToDatabase from "./server/database/connectDatabase.js";
+import connectToDatabase from "./database/connectDatabase.js";
 
 const debug = createDebug("isdinetwork-api:root");
 
